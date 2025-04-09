@@ -1,0 +1,429 @@
+/* Stile generale */
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.165);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#imgHeader {
+    height: 98%;
+    margin-left: 1%;
+    border-radius: 10px;
+}
+
+.menu {
+    width: 60%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 3%;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: goldenrod;
+}
+
+.menu a:hover {
+    transition: 0.5s;
+    color: white;
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: goldenrod;
+    margin-right: 3%;
+    cursor: pointer;
+}
+
+
+
+
+/* sezione introduttiva */
+.sezioneItrodutiva{
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 215, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textContainer1{
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    align-content: center;
+}
+
+
+#titIntoduzione{
+    font-size: 350%;
+    color: goldenrod;
+    margin: 0;
+}
+#textIntroduzione{
+    font-size: 1.5em;
+    color: white;
+}
+
+
+/* main */
+
+.main{
+    width: 70%;
+    height: 150%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25%;
+}
+
+.introduzione2{
+    color: white;
+    width: 80%;
+    height: 10%;
+    font-size: 200%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.offerte{
+
+    color: white;
+    width: 98%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offerte-text-container{
+
+    width: 45%;
+    height: 95%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+#titOfferte,
+#titRicerche{
+    color: goldenrod;
+    font-size: 200%;
+}
+
+.offerte-text-container p{
+    text-align: justify;
+    font-size: 140%;
+}
+
+
+
+.ricerche{
+
+    color: white;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ricerche-text-container{
+
+    width: 55%;
+    height: 95%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+#ulRicerca li{
+    font-size: 140%;
+    padding: 2%;
+}
+
+
+.conclusione{
+
+    color: white;
+    width: 80%;
+    height: 10%;
+    font-size: 180%;
+    text-align: center;
+}
+
+/* footer */
+.footer{
+    width: 99%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.165);
+    position: absolute;
+    bottom: -250%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.posizione,
+.social{
+
+    width: 30%;
+    height: 90%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+
+#footerTit1,
+#footerTit2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+}
+
+#footerList,
+#footerList2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+}
+#footerImg{
+    height: 85%;
+}
+
+.ipertestual{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* transizioni */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2.5s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+}
+
+.slide-in-left {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+.slide-in-left.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-in-right {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+.slide-in-right.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Menu a tendina per schermi ≤ 1468px */
+@media (max-width: 1468px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 80px;
+        right: 3%;
+        width: 260px;
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .menu a {
+        margin: 10px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #imgHeader {
+        height: 90%;
+    }
+
+
+    /* sezione introduttiva */
+    .sezioneItrodutiva{
+        width: 100%;
+        height: 30%;
+        background-color: rgba(255, 215, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .textContainer1{
+        width: 100%;
+        height: 70%;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        align-content: center;
+    }
+
+
+    #titIntoduzione{
+        font-size: 350%;
+        color: goldenrod;
+        margin: 0;
+    }
+    #textIntroduzione{
+        font-size: 1.5em;
+        color: white;
+    }
+
+
+    /* main */
+
+    .main{
+        width: 95%;
+        height: 150%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 25%;
+    }
+
+    .introduzione2{
+        color: white;
+        width: 100%;
+        height: 10%;
+        font-size: 200%;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .offerte{
+        color: white;
+        width: 98%;
+        height: 70%;
+        display: grid;
+        justify-items: center;
+    }
+
+    .offerte-text-container{
+        width: 98%;
+        height: 95%;
+        display: grid;
+        align-content: center;
+        justify-items: center;
+    }
+
+    #titOfferte,
+    #titRicerche{
+        color: goldenrod;
+        font-size: 200%;
+    }
+
+    .offerte-text-container p{
+        text-align: justify;
+        font-size: 140%;
+    }
+
+
+
+    .ricerche{
+        color: white;
+        width: 98%;
+        height: 70%;
+        display: grid;
+        justify-items: center;
+    }
+
+    .ricerche-text-container{
+        width: 95%;
+        height: 95%;
+        display: grid;
+        align-content: center;
+        justify-items: center;
+    }
+
+    #ulRicerca li{
+        font-size: 140%;
+        padding: 2%;
+    }
+
+
+    .conclusione{
+        color: white;
+        width: 95%;
+        height: 10%;
+        font-size: 180%;
+        text-align: center;
+    }
+
+
+    /* footer */
+
+    .footer{
+        width: 99%;
+        height: 30%;
+        background-color: rgba(255, 255, 255, 0.165);
+        position: absolute;
+        bottom: -380%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #footerImg{
+        height: 70%;
+    }
+
+    #footerTit1,
+    #footerTit2{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 150%;
+        text-align: center;
+    }
+
+    #footerList,
+    #footerList2{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 100%;
+    }
+}

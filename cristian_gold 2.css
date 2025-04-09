@@ -1,0 +1,204 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.header {
+    width: 100%;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.165);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#imgHeader {
+    height: 98%;
+    margin-left: 1%;
+    border-radius: 10px;
+}
+
+.menu {
+    width: 60%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 3%;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: goldenrod;
+}
+
+.menu a:hover {
+    transition: 0.5s;
+    color: white;
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: goldenrod;
+    margin-right: 3%;
+    cursor: pointer;
+}
+
+/* Menu a tendina per schermi ≤ 1468px */
+@media (max-width: 1468px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 80px;
+        right: 3%;
+        width: 260px;
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .menu a {
+        margin: 10px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #imgHeader {
+        height: 90%;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .paragrafi {
+        justify-content: center;
+    }
+
+    .textContainer {
+        margin-top: 50px;
+        width: 90%;
+        min-width: 650px;
+        min-height: 650px;
+    }
+
+    /* Aggiungi background solo al secondo paragrafo (textContainer2) */
+    #textContainer2 {
+        background-image: url("immagini_cristian_gold/pepite_prima_pagina.png");
+        background-size: cover;
+        background-position: center;
+        padding: 50px;
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+
+    /* Background solo per il paragrafo 3 (mobile) */
+    #textContainer3 {
+        background-image: url("immagini_cristian_gold/thumb999_lingotto-d-oro_1658664244_1658664246.jpg copia.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 50px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+
+/* Main generale */
+.main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+/* Paragrafo generale */
+.paragrafi {
+    width: 98%;
+    height: 60%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img {
+    height: 100%;
+}
+
+/* Titolo paragrafi */
+.titP {
+    color: white;
+    font-size: 300%;
+    margin: 100px;
+}
+
+.descrizione {
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+/* Contenitore testo */
+.textContainer {
+    width: 45%;
+    height: 80%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#imgP3{
+    margin-left: 5%;
+}
+
+/* Animazioni scroll */
+.hidden {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease;
+}
+
+.show-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* footer */
+.footer{
+    width: 99%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.165);
+
+    position: absolute;
+    bottom: -260%;
+}
+
+.posizione{
+    border: red solid;
+    width: 40%;
+    height: 90%;
+}

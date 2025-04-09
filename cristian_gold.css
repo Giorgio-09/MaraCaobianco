@@ -1,0 +1,309 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.header {
+    width: 100%;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.165);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#imgHeader {
+    height: 98%;
+    margin-left: 1%;
+    border-radius: 10px;
+}
+
+.menu {
+    width: 60%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 3%;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: goldenrod;
+}
+
+.menu a:hover {
+    transition: 0.5s;
+    color: white;
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: goldenrod;
+    margin-right: 3%;
+    cursor: pointer;
+}
+
+/* sezione introduttiva */
+.sezioneIntroduttiva{
+    width: 100%;
+    height: 80%;
+    background: url("immagini_cristian_gold/Black And White Minimalist Typography Personal Logo (2)_copia.png");
+    background-size: cover;
+    margin-bottom: 30px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#TitSlogan{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 700%;
+}
+
+#slogan{
+    font-size: 300%;
+}
+
+
+
+
+
+/* Main generale */
+.main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+/* Paragrafo generale */
+.paragrafi {
+    width: 98%;
+    height: 60%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img {
+    height: 100%;
+}
+
+/* Titolo paragrafi */
+.titP {
+    color: white;
+    font-size: 300%;
+    margin: 100px;
+}
+
+.descrizione {
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+/* Contenitore testo */
+.textContainer {
+    width: 45%;
+    height: 80%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/* Animazioni scroll */
+.hidden {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease;
+}
+
+.show-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* footer */
+.footer{
+    width: 99%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.165);
+    position: absolute;
+    bottom: -380%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.posizione,
+.social{
+
+    width: 30%;
+    height: 90%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+
+#footerTit1,
+#footerTit2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+}
+
+#footerList,
+#footerList2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+}
+#footerImg{
+    height: 85%;
+}
+
+.ipertestual{
+    color: black;
+    text-decoration: none;
+}
+
+/* Menu a tendina per schermi ≤ 1468px */
+@media (max-width: 1400px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95) ;
+        position: absolute;
+        top: 80px;
+        right: 3%;
+        width: 260px;
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .menu a {
+        margin: 10px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #imgHeader {
+        height: 90%;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .paragrafi {
+        width: 550px;
+        height: 1000px;
+    }
+
+    #titP{
+        margin: 0;
+    }
+
+    .textContainer {
+        width: 98%;
+        min-width: 500px;
+        min-height: 650px;
+    }
+
+    /* sezione iniziale: slogan */
+    #TitSlogan{
+        font-size: 400%;
+        font-weight: bold;
+    }
+    #slogan{
+        font-size: 270%;
+    }
+
+    /* Aggiungi background solo al secondo paragrafo (textContainer2) */
+
+    .main{
+        display: grid;
+
+    }
+
+    #textContainer2 {
+        height: 70%;
+        background-image: url("immagini_cristian_gold/pepite_prima_pagina.png");
+        background-size: cover;
+        background-position: center;
+        padding: 3%;
+        margin-top: 30px;
+        margin-left: 0%;
+        margin-right: none;
+        border-radius: 10px;
+    }
+
+    /* Background solo per il paragrafo 3 (mobile) */
+    #textContainer3 {
+        background-image: url("immagini_cristian_gold/thumb999_lingotto-d-oro_1658664244_1658664246.jpg copia.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: none;
+        border-radius: 10px;
+        margin-left: 0%;
+        overflow: hidden;
+    }
+
+    /* footer */
+
+    .footer{
+        width: 99%;
+        height: 30%;
+        min-height: 200px;
+        background-color: rgba(255, 255, 255, 0.165);
+        position: absolute;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #footerImg{
+        height: 70%;
+    }
+
+    #footerTit1,
+    #footerTit2{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 150%;
+        text-align: center;
+    }
+
+    #footerList,
+    #footerList2{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 100%;
+    }
+}
