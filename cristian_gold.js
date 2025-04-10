@@ -14,6 +14,5 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-// Applica l’osservatore agli elementi con classe hidden o hidden-left
 document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
 document.querySelectorAll('.hidden-left').forEach(el => observer.observe(el));

@@ -1,10 +1,22 @@
+/* Layout principale */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Occupa almeno tutta l'altezza della finestra */
+    margin: 0;
     background-color: rgb(0, 0, 0);
 }
 
+/* Contenitore principale */
+.generalClass {
+    flex: 1; /* Fa in modo che il contenitore principale si espanda per occupare lo spazio disponibile */
+}
+
+/* Header */
 .header {
     width: 100%;
     height: 20%;
+    min-height: 200px;
     background-color: rgba(255, 255, 255, 0.165);
     display: flex;
     align-items: center;
@@ -12,9 +24,10 @@ body {
 }
 
 #imgHeader {
-    height: 98%;
-    margin-left: 1%;
-    border-radius: 10px;
+    width: auto;         /* Imposta la larghezza automatica per non distorcere l'immagine */
+    max-width: 300px;     /* Impedisce che l'immagine ecceda la larghezza del suo contenitore */
+    height: 98%;        /* Mantiene la proporzione dell'immagine */
+    border-radius: 10px; /* Mantiene il bordo arrotondato come desiderato */
 }
 
 .menu {
@@ -48,36 +61,32 @@ body {
     cursor: pointer;
 }
 
-/* sezione introduttiva */
-.sezioneIntroduttiva{
+/* Sezione introduttiva */
+.sezioneIntroduttiva {
     width: 100%;
     height: 80%;
+    min-height: 800px;
     background: url("immagini_cristian_gold/Black And White Minimalist Typography Personal Logo (2)_copia.png");
     background-size: cover;
-    margin-bottom: 30px;
     display: grid;
     align-content: center;
     justify-content: center;
     text-align: center;
 }
 
-#TitSlogan{
+#TitSlogan {
     font-family: 'Times New Roman', Times, serif;
     font-size: 700%;
 }
 
-#slogan{
+#slogan {
     font-size: 300%;
 }
-
-
-
-
 
 /* Main generale */
 .main {
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: grid;
     justify-items: center;
 }
@@ -118,8 +127,6 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-
-
 /* Animazioni scroll */
 .hidden {
     opacity: 0;
@@ -143,56 +150,55 @@ body {
     transform: translateX(0);
 }
 
-
-/* footer */
-.footer{
-    width: 99%;
+/* Footer */
+.footer {
+    width: 100%;
     height: 30%;
     background-color: rgba(255, 255, 255, 0.165);
-    position: absolute;
-    bottom: -380%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 20px 0;
 }
 
 .posizione,
-.social{
-
+.social {
     width: 30%;
-    height: 90%;
-    display: grid;
-    align-content: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-
+#footerImg {
+    height: 90%;         /* Imposta la larghezza automatica per non distorcere l'immagine */
+    max-width: 300px;      /* Impedisce che l'immagine occupi tutta la larghezza del footer */
+    height: auto;        /* Mantiene la proporzione dell'immagine */
+}
 #footerTit1,
-#footerTit2{
+#footerTit2 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 200%;
+    font-size: 150%;
+    text-align: center;
 }
 
 #footerList,
-#footerList2{
+#footerList2 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 150%;
-}
-#footerImg{
-    height: 85%;
+    font-size: 100%;
 }
 
-.ipertestual{
+.ipertestual {
     color: black;
     text-decoration: none;
 }
 
 /* Menu a tendina per schermi ≤ 1468px */
-@media (max-width: 1400px) {
+@media (max-width: 1100px) {
     .menu {
         display: none;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.95) ;
+        background-color: rgba(0, 0, 0, 0.95);
         position: absolute;
         top: 80px;
         right: 3%;
@@ -227,7 +233,7 @@ body {
         height: 1000px;
     }
 
-    #titP{
+    #titP {
         margin: 0;
     }
 
@@ -237,20 +243,19 @@ body {
         min-height: 650px;
     }
 
-    /* sezione iniziale: slogan */
-    #TitSlogan{
+    /* Sezione iniziale: slogan */
+    #TitSlogan {
         font-size: 400%;
         font-weight: bold;
     }
-    #slogan{
+
+    #slogan {
         font-size: 270%;
     }
 
     /* Aggiungi background solo al secondo paragrafo (textContainer2) */
-
-    .main{
+    .main {
         display: grid;
-
     }
 
     #textContainer2 {
@@ -276,33 +281,30 @@ body {
         overflow: hidden;
     }
 
-    /* footer */
-
-    .footer{
-        width: 99%;
+    /* Footer */
+    .footer {
+        width: 100%;
         height: 30%;
         min-height: 200px;
         background-color: rgba(255, 255, 255, 0.165);
-        position: absolute;
-        
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
 
-    #footerImg{
+    #footerImg {
         height: 70%;
     }
 
     #footerTit1,
-    #footerTit2{
+    #footerTit2 {
         font-family: 'Times New Roman', Times, serif;
         font-size: 150%;
         text-align: center;
     }
 
     #footerList,
-    #footerList2{
+    #footerList2 {
         font-family: 'Times New Roman', Times, serif;
         font-size: 100%;
     }
