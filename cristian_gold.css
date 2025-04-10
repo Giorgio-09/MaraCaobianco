@@ -194,7 +194,7 @@ body {
 }
 
 /* Menu a tendina per schermi ≤ 1468px */
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
     .menu {
         display: none;
         flex-direction: column;
