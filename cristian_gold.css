@@ -223,6 +223,7 @@ body {
     #imgHeader {
         height: 1%;
         min-height: 150px;
+        margin-left: 5%;
     }
 
     .img {
