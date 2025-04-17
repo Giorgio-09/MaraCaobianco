@@ -426,7 +426,9 @@ body {
     }
 
     #footerImg{
-        height: 70%;
+        height: 70%;         /* Imposta la larghezza automatica per non distorcere l'immagine */
+        max-width: 200px;      /* Impedisce che l'immagine occupi tutta la larghezza del footer */
+        height: auto; 
     }
 
     #footerTit1,
