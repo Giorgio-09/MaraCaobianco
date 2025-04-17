@@ -187,6 +187,11 @@ body {
 #footerList2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 100%;
+    color: black;
+}
+
+#footerList li{
+    color: black;
 }
 
 .ipertestual {
