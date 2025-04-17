@@ -335,3 +335,7 @@ html, body {
         width: 90%;
     }
 }
+* {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
