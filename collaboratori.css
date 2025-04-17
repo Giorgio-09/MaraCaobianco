@@ -5,7 +5,6 @@ body {
     justify-content: center;
     min-width: 100vh;
     min-height: 100vh; /* Occupa almeno tutta l'altezza della finestra */
-    margin-top: 10%;
     background-color: rgb(0, 0, 0);
 }
 
@@ -220,8 +219,10 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 150%;
 }
-#footerImg{
-    height: 85%;
+#footerImg {
+    height: 90%;         /* Imposta la larghezza automatica per non distorcere l'immagine */
+    max-width: 300px;      /* Impedisce che l'immagine occupi tutta la larghezza del footer */
+    height: auto;        /* Mantiene la proporzione dell'immagine */
 }
 
 .ipertestual{
