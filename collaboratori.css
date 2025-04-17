@@ -328,7 +328,7 @@ body {
     /* main */
 
     .main{
-        width: 95%;
+        width: 100%;
         height: 150%;
         position: relative;
         left: 50%;
@@ -352,7 +352,7 @@ body {
 
     .offerte{
         color: white;
-        width: 98%;
+        width: 70%;
         height: 70%;
         display: grid;
         justify-items: center;
@@ -381,7 +381,7 @@ body {
 
     .ricerche{
         color: white;
-        width: 98%;
+        width: 70%;
         height: 70%;
         display: grid;
         justify-items: center;
