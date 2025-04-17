@@ -353,6 +353,7 @@ body {
 
     .offerte{
         color: white;
+        text-align: center;
         width: 70%;
         height: 70%;
         display: grid;
