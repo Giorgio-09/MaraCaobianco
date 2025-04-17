@@ -329,3 +329,9 @@ html, body {
         font-size: 100%;
     }
 }
+@media (max-width: 768px) {
+    .textContainer2 {
+        min-width: auto;
+        width: 90%;
+    }
+}
