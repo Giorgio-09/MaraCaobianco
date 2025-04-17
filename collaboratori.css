@@ -1,12 +1,23 @@
 /* Stile generale */
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 100vh;
+    min-height: 100vh; /* Occupa almeno tutta l'altezza della finestra */
+    margin: 0;
     background-color: rgb(0, 0, 0);
-    font-family: Arial, sans-serif;
 }
 
+.generalClass {
+    flex: 1; /* Fa in modo che il contenitore principale si espanda per occupare lo spazio disponibile */
+}
+
+/* Header */
 .header {
     width: 100%;
     height: 20%;
+    min-height: 250px;
     background-color: rgba(255, 255, 255, 0.165);
     display: flex;
     align-items: center;
@@ -14,9 +25,10 @@ body {
 }
 
 #imgHeader {
-    height: 98%;
-    margin-left: 1%;
-    border-radius: 10px;
+    width: auto;         /* Imposta la larghezza automatica per non distorcere l'immagine */
+    max-width: 300px;     /* Impedisce che l'immagine ecceda la larghezza del suo contenitore */
+    height: 98%;        /* Mantiene la proporzione dell'immagine */
+    border-radius: 10px; /* Mantiene il bordo arrotondato come desiderato */
 }
 
 .menu {
@@ -51,12 +63,11 @@ body {
 }
 
 
-
-
 /* sezione introduttiva */
 .sezioneItrodutiva{
     width: 100%;
     height: 30%;
+    min-height: 200px;
     background-color: rgba(255, 215, 0, 0.1);
     display: flex;
     align-items: center;
@@ -88,16 +99,16 @@ body {
 
 .main{
     width: 70%;
-    height: 150%;
-    position: absolute;
+    height: auto;
+    position: relative;
     left: 50%;
     transform: translate(-50%);
-    margin-top: 10px;
+    margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 25%;
+    gap: 400px;
 }
 
 .introduzione2{
