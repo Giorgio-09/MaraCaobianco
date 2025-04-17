@@ -335,6 +335,7 @@ body {
         left: 50%;
         transform: translate(-50%);
         margin-top: 5%;
+        margin-bottom: 5%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
