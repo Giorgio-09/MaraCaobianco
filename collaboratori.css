@@ -121,17 +121,16 @@ body {
 }
 
 .offerte{
-
     color: white;
     width: 98%;
     height: 30%;
+    font-size: 210%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .offerte-text-container{
-
     width: 45%;
     height: 95%;
     display: grid;
@@ -153,10 +152,10 @@ body {
 
 
 .ricerche{
-
     color: white;
     width: 90%;
     height: 30%;
+    font-size: 210%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
