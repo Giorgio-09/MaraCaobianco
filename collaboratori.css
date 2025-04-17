@@ -191,7 +191,6 @@ body {
     width: 100vw; /* fa sì che il footer occupi tutta la larghezza della viewport */
     background-color: rgba(255, 255, 255, 0.165);
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     position: relative;
@@ -418,7 +417,6 @@ body {
         width: 100vw; /* fa sì che il footer occupi tutta la larghezza della viewport */
         background-color: rgba(255, 255, 255, 0.165);
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: space-around;
         position: relative;
