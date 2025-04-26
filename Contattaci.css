@@ -288,6 +288,24 @@ main {
     #footerList2 {
         font-size: 100%;
     }
+    .container {
+        width: 100%;
+        min-width: 400px;
+        top: 5%;
+    }
+
+    .titolo {
+        font-size: 35px;
+        height: 15%;
+    }
+
+    .inputContainer {
+        top: 45%;
+    }
+
+    .confirmContainer {
+        bottom: 5%;
+    }
 }
 
 @media (max-width: 800px) {
