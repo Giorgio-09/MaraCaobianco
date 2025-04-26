@@ -293,7 +293,7 @@ main {
 @media (max-width: 800px) {
     .container {
         width: 100%;
-        min-width: 350px;
+        min-width: 400px;
         top: 5%;
     }
 
