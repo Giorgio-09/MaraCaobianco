@@ -1,0 +1,81 @@
+<!DOCTYPE html5>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Contattaci.css">
+    <title>CONTATTACI</title> 
+</head>
+<body>
+    <header class="header">
+        <img src="immagini_cristian_gold/Mara_Caobianco_logo copia.png" alt="" id="imgHeader">
+
+        <div class="menu-toggle" id="menuToggle">&#9776;</div>
+
+        <div class="menu" id="menuLinks">
+            <a href="cristian_gold.html">HOME</a>
+            <a href="Pagina_clienti.html">SERVIZI</a>
+            <a href="collaboratori.html">LAVORA CON NOI</a>
+            <a href="Contattaci.html">CONTATTACI</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="titolo">
+                <p>INVIACI I TUOI CONTATTI</p>
+            </div>
+
+            <div class="ruoloContainer">
+                <button class="ruoloBtn" id="cliente">CLIENTE</button>
+                <button class="ruoloBtn" id="collaboratore">COLLABORATORE</button>
+            </div>
+
+            <img src="immagini_cristian_gold/Black And White Minimalist Typography Personal Logo (3).png" alt="" id="img1">
+
+            <div class="inputContainer">
+                <form id="contactForm">
+                    <input type="text" class="input" id="nome" name="nome" placeholder="NOME" required>
+                    <input type="text" class="input" id="cognome" name="cognome" placeholder="COGNOME" required>
+                    <input type="email" class="input" id="mail" name="mail" placeholder="MAIL" required>
+                    <input type="text" class="input" id="numero" name="numero" placeholder="TELEFONO" required>
+                    <textarea name="messaggio" class="input" id="messaggio" placeholder="MESSAGGIO" required></textarea>
+                    <button type="submit" id="confirmBtn">INVIA</button>
+                </form>
+
+            </div>
+
+        </div>
+    </main>
+
+    <div class="footer">
+        <div class="posizione">
+            <h2 id="footerTit1">VIENI A TROVARCI!</h2>
+            <ul id="footerList">
+                <li>Corso del Popolo 278, Rovigo</li>
+                <li>Contattaci per maggiori informazioni 349 13 25 479</li>
+            </ul>
+        </div>
+
+        <img src="immagini_cristian_gold/Mara_Caobianco_logo.png" alt="" id="footerImg">
+
+        <div class="social">
+            <h2 id="footerTit2">SEGUICI ANCHE SU:</h2>
+            <ul id="footerList2">
+                <li><a href="" class="ipertestual">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/mara-caobianco-65594b59/" class="ipertestual">Linkedin</a></li>
+                <li><a href="https://www.facebook.com/mara.caobianco" class="ipertestual">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("b1SRHrFouAgZ64o3n"); // ← questo lo trovi su EmailJS (Dashboard > Account)
+        })();
+    </script>
+
+    <script src="Contattaci.js"></script>
+    
+</body>
+</html>
