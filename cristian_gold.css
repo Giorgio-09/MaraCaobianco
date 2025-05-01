@@ -325,7 +325,10 @@ html, body {
     }
     
     .policy{
-        gap: 20px;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     #footerImg {
