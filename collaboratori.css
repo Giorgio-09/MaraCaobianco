@@ -415,34 +415,76 @@ body {
 
     /* footer */
 
-    .footer{
-        width: 100%; /* fa sì che il footer occupi tutta la larghezza della viewport */
+  /* Footer */
+    .footer {
+        width: 100%;
         background-color: rgba(255, 255, 255, 0.165);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        justify-items: center;
+        align-items: start; /* allineamento in alto per contenuti di diversa altezza */
+    }
+    
+    .posizione,
+    .social,
+    .policy,
+    .spazio-vuoto {
+        width: 80%;
+        min-height: auto;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        position: relative;
-        bottom: 0;
-        left: 0;
-        margin-top: auto;
+        justify-content: flex-start;
+        padding: 0px;
+        box-sizing: border-box;
     }
-
-    #footerImg{
-        height: 70%;         /* Imposta la larghezza automatica per non distorcere l'immagine */
-        max-width: 200px;      /* Impedisce che l'immagine occupi tutta la larghezza del footer */
-        height: auto; 
+    
+    .policy{
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
+    
+    #footerImg {
+        max-height: 200px;
+        height: 200px;         /* Imposta la larghezza automatica per non distorcere l'immagine */
+        max-width: 300px;      /* Impedisce che l'immagine occupi tutta la larghezza del footer */
+        height: auto;        /* Mantiene la proporzione dell'immagine */
+    }
     #footerTit1,
-    #footerTit2{
+    #footerTit2 {
         font-family: 'Times New Roman', Times, serif;
         font-size: 150%;
         text-align: center;
     }
-
+    
     #footerList,
-    #footerList2{
+    #footerList2 {
         font-family: 'Times New Roman', Times, serif;
         font-size: 100%;
+        color: black;
+    }
+    
+    #footerList li{
+        color: black;
+    }
+    
+    .ipertestual {
+        color: black;
+        text-decoration: none;
+    }
+}
+@media (max-width: 768px) {
+    .textContainer2 {
+        min-width: auto;
+        width: 90%;
+    }
+    .footer {
+        overflow-y: auto;
+        max-height: 100vh;
     }
 }
